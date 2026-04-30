@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>受講生さん専用ポータル | KATAZUKE.brand</title>
+    <!-- We DO NOT link any external CSS here to prevent conflicts -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #F9F7F2;
+            color: #333;
+        }
+
+        /* ログインボックス */
+        #loginArea {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F9F7F2;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            border: 2px solid #8A9A5B;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: #8A9A5B;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* 入室後のポータル画面（最初は隠す） */
+        #portalArea {
+            display: none;
+            min-height: 100vh;
+            background: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+            box-sizing: border-box;
+        }
+
+        .notion-btn {
+            display: inline-block;
+            background: #8A9A5B;
+            color: #fff !important;
+            padding: 25px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(138, 154, 91, 0.3);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 入室前 -->
+    <div id="loginArea">
+        <div class="card">
+            <h2 style="color:#8A9A5B;">受講生さん専用サイト</h2>
+            <p style="font-size: 0.9rem; color:#666;">パスワードを入力して入室してください</p>
+            <div id="err" style="color:red; font-size: 0.8rem; display:none; margin-top:10px;">パスワードが間違っています。</div>
+            <input type="password" id="pw" placeholder="パスワードを入力">
+            <button onclick="check()" class="btn">入室する</button>
+            <br><br>
+            <a href="../index.html" style="color:#999; font-size: 0.8rem;">← サイトに戻る</a>
+        </div>
+    </div>
+
+    <!-- 入室後 -->
+    <div id="portalArea">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h1 style="color:#8A9A5B; font-size: 1.8rem;">受講生さん専用ポータル</h1>
+            <p style="line-height: 1.8; margin: 30px 0;">
+                いつも受講ありがとうございます。<br>
+                動画や資料などはすべて、<br>
+                専用の Notion ページにまとめてあります。<br>
+                下のボタンからお進みください。
+            </p>
+            
+            <a href="https://plume-diamond-6f1.notion.site/234758dcafee8043860aef358a2d01c9?v=234758dcafee81eba981000ca1c64a6f&pvs=74" 
+               target="_blank" 
+               class="notion-btn">
+                📑 Notion受講生ページを開く
+            </a>
+
+            <br><br>
+            <a href="../index.html" style="color:#8A9A5B; font-weight:bold; text-decoration:none;">← サイトのトップへ戻る</a>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            const p = document.getElementById('pw').value;
+            const l = document.getElementById('loginArea');
+            const portal = document.getElementById('portalArea');
+            const e = document.getElementById('err');
+
+            if (p === 'honki2026') {
+                l.style.display = 'none';
+                portal.style.display = 'block';
+                window.scrollTo(0, 0);
+            } else {
+                e.style.display = 'block';
+            }
+        }
+        
+        // Enter key
+        document.getElementById('pw').addEventListener('keypress', function (ev) {
+            if (ev.key === 'Enter') check();
+        });
+    </script>
+</body>
+</html>

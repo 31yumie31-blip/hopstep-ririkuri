@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おうちで学ぶ片付け | あなた本来の暮らしを取り戻す</title>
+    <meta name="description" content="片付けスタートライン動画講座、リリクリノート、21日間メールレッスンなど、あなたの気質に合わせた片付けを提案します。">
+
+    <!-- SNSでの表示（OGP設定） -->
+    <meta property="og:title" content="おうちで学ぶ片付け | あなた本来の暮らしを取り戻す">
+    <meta property="og:description" content="あなたの気質に合わせたお片付けを提案。スタートライン動画講座や21日間レッスンで、心地よい暮らしを">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ファビコン（タブのアイコン） -->
+    <link rel="icon" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo"><img src="logo.png" alt="ホップステップお片付け部"></div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#diagnosis" onclick="toggleMenu()">Diagnosis</a></li>
+                <li><a href="#newsletter" onclick="toggleMenu()">Newsletter</a></li>
+                <li><a href="#profile" onclick="toggleMenu()">Profile</a></li>
+                <li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
+                <li><a href="members/index.html" onclick="toggleMenu()">Members</a></li>
+                <li><a href="https://www.reservestock.jp/page/event_series/94671" target="_blank" class="btn-primary" onclick="toggleMenu()">Reserve</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <img src="hero_bg.png" alt="Hero Background" class="hero-img">
+        <div class="hero-content">
+            <h1 class="fade-in">今日から、<br>自分らしい暮らしを</h1>
+            <p class="fade-in-delayed" style="line-height: 1.8;">プロの視点と心のケアで、<br>あなたの「片付けスタートライン」を<br>一緒に描きます。</p>
+            <div class="hero-btns fade-in-delayed">
+                <a href="#services" class="btn-primary">講座を見る</a>
+                <a href="#diagnosis" class="btn-secondary">「片付けタイプ」診断</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Consultation Section -->
+        <section id="consultation" class="consultation-section" style="padding: 80px 0; background: #fffcf9;">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 50px;">
+                    <span style="display: inline-block; color: var(--primary); font-family: 'Outfit', sans-serif; letter-spacing: 2px; font-weight: 600; font-size: 0.9rem;">CONSULTATION ROOM</span>
+                    <h2 class="section-title" style="margin-top: 10px;">ほっと一息、お片付け相談室</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8;">今のあなたに一番近い「お悩み」を選んでみてください。<br>プロの視点から、あなたにぴったりの「処方箋」をお出しします。</p>
+                </div>
+
+                <div class="consultation-list" style="max-width: 800px; margin: 0 auto;">
+                    <!-- Q1 -->
+                    <details class="consultation-item reveal">
+                        <summary>Q1. 片付けても片付けても、すぐ散らかってしまいます…</summary>
+                        <div class="consultation-answer">
+                            <div class="answer-header">
+                                <span class="badge">みほさんからの処方箋 🕊️</span>
+                            </div>
+                            <p>収納テクニックだけで片付けようとすると、どうしてもリバウンドしてしまいます。実は、根本的な原因は<strong>「思考のクセ」</strong>にあるかもしれません。</p>
+                            <p>まずは、ノウハウよりも「自分の思考の整え方」を知ることから始めましょう。</p>
+                            <div class="answer-action">
+                                <span class="action-label">▼ おすすめの処方薬：根本から思考を変える</span>
+                                <a href="https://www.reservestock.jp/subscribe/168370" target="_blank" class="btn-primary">片付け脳セットアップ 7日間メールレッスン</a>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <!-- Q2 -->
+                    <details class="consultation-item reveal">
+                        <summary>Q2. 片付けなきゃと思うのに、全然やる気が起こりません…</summary>
+                        <div class="consultation-answer">
+                            <div class="answer-header">
+                                <span class="badge">みほさんからの処方箋 🕊️</span>
+                            </div>
+                            <p>「一気に完璧にやろう」としていませんか？完璧を求めるほど、思考が詰まって脳がフリーズし、動けなくなってしまうんです。</p>
+                            <p>あなたはズボラなのではありません。まずは絡まった思考をやさしくほどいて、身軽になってみませんか？</p>
+                            <div class="answer-action">
+                                <span class="action-label">▼ おすすめの処方薬：思考をやさしくほどく</span>
+                                <a href="https://www.reservestock.jp/page/event_series/94671" target="_blank" class="btn-primary">O型気質さん専門 片付け迷子卒業セッション</a>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Q3 -->
+                    <details class="consultation-item reveal">
+                        <summary>Q3. モノが多すぎて、どこから片付けたらいいかわかりません！</summary>
+                        <div class="consultation-answer">
+                            <div class="answer-header">
+                                <span class="badge">みほさんからの処方箋 🕊️</span>
+                            </div>
+                            <p>自分のタイプや現在地を知らないまま手をつけるのは、地図を持たずに旅に出るようなもの。人によって「心地よいスタートライン」は全く違いますよ。</p>
+                            <p>まずは難しく考えずゲーム感覚で、自分の「片付け力とタイプ」を知って現在地を把握しましょう！</p>
+                            <div class="answer-action">
+                                <span class="action-label">▼ おすすめの処方薬：自分の現在地を知る</span>
+                                <a href="https://www.reservestock.jp/page/fast_scoring/1542" target="_blank" class="btn-primary">「片付け力チェック」無料診断</a>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Q4 -->
+                    <details class="consultation-item reveal">
+                        <summary>Q4. そもそも、片付けって「どうやればいい」んでしょうか？</summary>
+                        <div class="consultation-answer">
+                            <div class="answer-header">
+                                <span class="badge">みほさんからの処方箋 🕊️</span>
+                            </div>
+                            <p>自己流で進めて手が止まっていませんか？自分に合った「正しい進め方と最初の一歩の手順」を知るだけで、スルスルと手が動くようになります。</p>
+                            <p>迷いをゼロにするための、具体的な「最初の一歩」を動画で分かりやすく解説しています。</p>
+                            <div class="answer-action">
+                                <span class="action-label">▼ おすすめの処方薬：迷いをゼロにする具体策</span>
+                                <a href="https://www.reservestock.jp/inquiry/114129" target="_blank" class="btn-primary">片付けスタートライン動画講座</a>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- LINE AI Consultation Promo -->
+                <div class="line-promo reveal" style="margin-top: 60px; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 2px solid #06C755; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: #06C755; margin-bottom: 15px; font-size: 1.4rem;">もっと詳しく相談したいですか？</h3>
+                    <p style="color: var(--text-deep); font-weight: 600; margin-bottom: 15px; line-height: 1.6;">「私の家の場合はどうすればいい？」<br>そんな個人的なお悩みは、いつでもLINEでご相談ください。</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; line-height: 1.8;">みほさんの「奇跡のお片付けメソッド」を学習したAIアシスタントが、<br>24時間365日、あなたのお悩みに LINE の中で優しくお答えします！</p>
+                    <a href="#" class="btn-line">
+                        <svg viewBox="0 0 24 24" width="24" height="24" style="fill: white; margin-right: 8px; vertical-align: middle;"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.824 8.868 9.074 9.613.364.081.859.25 1.05.589.172.302.112.775.053 1.096l-.326 2c-.086.495-.386 1.579 1.402.83 1.789-.748 9.663-5.694 11.581-9.673.759-1.401 1.166-2.909 1.166-4.455zM8.331 11.233H6.896V8.924H5.464V12.66h2.867v-1.427zm2.4 0h-1.435V8.924h1.435v2.309zm4.331-2.309l-1.996 1.95V8.924h-1.435V12.66h1.435v-1.951l1.996 1.951h1.465l-2.049-1.951 2.049-2.259h-1.465z"></path></svg>
+                        さっそくLINEでAIみほさんに相談する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">おうちで学ぶ片付け</h2>
+                <div class="service-grid">
+                    <!-- Course 1 -->
+                    <div class="service-card" data-preview-time="45">
+                        <div class="card-image">
+                            <div class="preview-overlay"
+                                onclick="openPreview('片付けスタートライン動画講座', '動画講座の冒頭をプレビュー再生します', 'vimeo', '934641266', '06049fdedd', 180, 'https://www.reservestock.jp/inquiry/114129')">
+                                <button class="btn-preview">▶ 3分間チラ見せ</button>
+                            </div>
+                            <img src="course1.png" alt="片付けスタートライン動画講座">
+                        </div>
+                        <div class="card-body">
+                            <h3>片付けスタートライン<br>動画講座</h3>
+                            <p style="line-height: 1.8;">「何から始めればいい？」の<br>迷いをゼロにする、<br>最初の一歩のための動画講座。</p>
+                            <a href="https://www.reservestock.jp/inquiry/114129" target="_blank" class="btn-text">詳しく見る
+                                & 申し込む</a>
+                        </div>
+                    </div>
+                    <!-- Course 2 -->
+                    <div class="service-card" data-preview-time="60">
+                        <div class="card-image">
+                            <div class="preview-overlay"
+                                onclick="openPreview('リリース＆クリエイトノート活用実践講座', '実際のワークの様子を一部公開中', 'vimeo', '1044914746', '7ca455ea55', 180, 'https://www.reservestock.jp/inquiry/130065')">
+                                <button class="btn-preview">▶ 3分間試聴する</button>
+                            </div>
+                            <img src="course2.png" alt="リリース＆クリエイトノート活用実践講座">
+                        </div>
+                        <div class="card-body">
+                            <h3>リリース＆クリエイトノート<br>活用実践講座</h3>
+                            <p style="line-height: 1.8;">散らかった思考を紙に書き出し、<br>理想の暮らしを具体化するワーク。<br>実技を完全網羅。</p>
+                            <a href="https://www.reservestock.jp/inquiry/130065" target="_blank" class="btn-text">詳しく見る
+                                & 申し込む</a>
+                        </div>
+                    </div>
+                    <!-- Course 3 -->
+                    <div class="service-card" data-preview-time="90">
+                        <div class="card-image">
+                            <div class="preview-overlay"
+                                onclick="openPreview('21日間 片付け習慣化レッスン', '初日の特別音声メッセージを再生します', 'audio', 'https://image.reservestock.jp/pictures/34354_NjA3OTZkZmVlNmUwZ.m4a', '', 60, 'https://www.reservestock.jp/subscribe/273710')">
+                                <button class="btn-preview">🎧 1分間試聴する</button>
+                            </div>
+                            <img src="course3.png" alt="21日間片付け習慣化メール＆音声レッスン">
+                        </div>
+                        <div class="card-body">
+                            <h3>21日間 片付け習慣化<br>メール＆音声レッスン</h3>
+                            <p style="line-height: 1.8;">毎日届く音声とメッセージで、<br>リバウンドしない「片付け体質」を<br>21日間でじっくり育む集中プログラム。</p>
+                            <a href="https://www.reservestock.jp/subscribe/273710" target="_blank"
+                                class="btn-text">レッスン詳細へ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Session Section -->
+        <section class="session-section">
+            <div class="container">
+                <div class="session-flex">
+                    <div class="session-content">
+                        <span
+                            style="display: inline-block; background: var(--secondary); color: var(--text-deep); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 10px;">完璧にやろうとして止まってしまうあなたへ</span>
+                        <h3 style="margin-bottom: 15px; font-size: 1.7rem; color: var(--primary);">
+                            O型気質さん専門<br>片付け迷子卒業セッション</h3>
+                        <p style="margin-bottom: 25px; line-height: 1.8;">
+                            「一気にやらなきゃ」と完璧を求めるほど、<br>手が止まっていませんか？<br><br>それはズボラなのではなく、<br>O型気質さん特有の「思考の詰まり」です。<br><br>このセッションではいきなり片付けず、<br>まずはあなたの思考をやさしくほどき、<br>動ける形に組み替えます。
+                        </p>
+                        <ul class="session-features">
+                            <li>動けなかった「本当の理由」がわかる</li>
+                            <li>今日から始める行動が「1つだけ」に絞れる</li>
+                            <li>片付けへのプレッシャーがスッと軽くなる（40分）</li>
+                        </ul>
+                        <a href="https://www.reservestock.jp/page/event_series/94671" target="_blank"
+                            class="btn-primary">たった40分で迷子を卒業する</a>
+                    </div>
+                    <div class="session-image">
+                        <img src="session_img.png" alt="O型気質さんセッション">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backend Course Teaser -->
+        <section class="backend-teaser"
+            style="padding: 100px 0; background: var(--white); position: relative; overflow: hidden;">
+            <div class="container">
+                <div class="backend-flex" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+                    <div class="backend-image reveal" style="flex: 1; min-width: 300px; position: relative;">
+                        <!-- Decorative square behind image -->
+                        <div
+                            style="position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 2px solid var(--secondary); border-radius: 20px; z-index: 0;">
+                        </div>
+                        <img src="backend_course.png" alt="ホップステップお片付け部"
+                            style="width: 100%; border-radius: 20px; position: relative; z-index: 1; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+                    </div>
+                    <div class="backend-content reveal" style="flex: 1; min-width: 300px;">
+                        <span
+                            style="display: inline-block; color: var(--primary); font-family: 'Outfit', sans-serif; letter-spacing: 2px; font-weight: 600; margin-bottom: 10px; font-size: 0.9rem;">PREMIUM
+                            PROGRAM</span>
+                        <h2
+                            style="font-size: 2rem; color: var(--primary); font-family: 'Noto Serif JP', serif; margin-bottom: 20px; line-height: 1.3;">
+                            ホップステップお片付け部<br>暮らしアップデートラボ</h2>
+                        <p style="color: var(--text-deep); font-weight: 600; margin-bottom: 20px; font-size: 1.05rem;">
+                            一生モノの「片付け脳」を育て、<br>わたしらしい暮らしを叶える半年間の伴走プログラム。</p>
+                        <p style="color: var(--text-muted); margin-bottom: 30px; line-height: 1.8;">
+                            一人では挫折してしまったお片付けも、<br>プロの伴走と仲間の存在があれば劇的に変わります。<br><br>一時的なテクニックではなく、<br>自分の思考やモノとの向き合い方を根本から整え、<br>リバウンドゼロの暮らしを目指す、<br>当サイトの集大成となるプログラムです。
+                        </p>
+
+                        <div
+                            style="background: #fdfaf6; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 4px solid var(--primary);">
+                            <p style="font-size: 1rem; color: var(--text-deep); font-weight: 600; margin-bottom: 10px;">
+                                ✨ 本講座にご興味のある方へ</p>
+                            <p
+                                style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.8;">
+                                本講座（暮らしアップデートラボ）は、<br>お客様一人ひとりに合わせた手厚いサポートのため、<br>まずは<strong>「O型気質さん片付け迷子卒業セッション」</strong>を<br>ご受講いただいた方から優先してご案内しております。
+                            </p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8;">
+                                「私にも合っているかな？」と気になった方は、<br>まずは40分の個別セッションで、<br>あなたの片付けの現在地をお話ししましょう！</p>
+                        </div>
+                        <a href="https://www.reservestock.jp/page/event_series/94671" target="_blank"
+                            class="btn-primary" style="display: inline-block;">まずは40分セッションに申し込む</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnosis Section -->
+        <section id="diagnosis" class="diagnosis-alt">
+            <div class="container text-center">
+                <h2 class="section-title">あなたの「片付けタイプ」診断</h2>
+                <p style="margin-bottom: 50px;">簡単な質問に答えるだけで、あなたの片付けの突破口が見つかります。</p>
+
+                <!-- Top Diagnosis Feature -->
+                <div class="diagnosis-feature">
+                    <div class="diagnosis-feature-img reveal">
+                        <img src="check_test_photo.png" alt="片付け力チェック診断">
+                    </div>
+                    <div class="diagnosis-feature-content" style="text-align: left;">
+                        <span
+                            style="display: inline-block; background: var(--secondary); color: var(--text-deep); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;">60秒で隠れた片付け力が見つかる！</span>
+                        <h3
+                            style="font-size: 1.6rem; color: var(--primary); margin-bottom: 15px; font-family: 'Noto Serif JP', serif;">
+                            片付けが苦手な女性のための<br>『片付け力チェック』無料診断</h3>
+                        <p style="color: var(--text-deep); font-weight: 600; margin-bottom: 20px; line-height: 1.6;">
+                            いまの片付け力の現在地を知って、<br>今後どうすればいいかが見える！</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; line-height: 1.8;">
+                            「え？片付けが苦手なわたしに、<br>片付け力なんてあるの？」<br>と思うかもしれません。<br><br>でも、正しいやり方とコツを知れば、<br>あなたも片付けができるようになります。<br><br>気軽に直感でチェックして、<br>自分の隠れた片付け力を知っておきましょう！
+                        </p>
+
+                        <a href="https://www.reservestock.jp/page/fast_scoring/1542" target="_blank" class="btn-primary"
+                            style="display: block; text-align: center; border-radius: 5px; padding: 15px 10px; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(138, 154, 91, 0.3);">▶
+                            今すぐ無料診断する</a>
+                    </div>
+                </div>
+
+                <!-- Secondary Diagnoses -->
+                <div class="diagnosis-grid">
+                    <div class="diag-item reveal" style="background-image: url('diagnosis_switch.png');">
+                        <h4>10秒でわかる！<br>片付けスイッチが入る３タイプ診断</h4>
+                        <p
+                            style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 600; line-height: 1.6;">
+                            片付けが進まない理由は<br>タイプ別にあります。<br>あなたにぴったりの方法と<br>Ebookプレゼント付き！</p>
+                        <a href="https://www.reservestock.jp/page2/fast_scoring/2233" target="_blank"
+                            class="btn-secondary">10秒で診断する</a>
+                    </div>
+                    <div class="diag-item reveal" style="background-image: url('diagnosis_princess.png');">
+                        <h4>お部屋の性格診断<br>（散らかり姫3問診断）</h4>
+                        <p
+                            style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 600; line-height: 1.6;">
+                            あなたのお部屋はどのタイプ？<br>ゲーム感覚で楽しく<br>チェックしてみましょう。</p>
+                        <a href="https://www.reservestock.jp/page2/fast_scoring/2031" target="_blank"
+                            class="btn-secondary">3問診断スタート</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Lesson Section -->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container text-center">
+                <h2 class="section-title">無料で学ぶ、片付けのヒント</h2>
+                <p style="line-height: 1.8;">ノウハウだけでは続かなかったあなたへ。<br><br>まずは無料のメールで<br>「片付け脳」を育ててみませんか？</p>
+
+                <div class="newsletter-list">
+                    <!-- 7-day mail lesson -->
+                    <div class="newsletter-banner reveal">
+                        <div class="ns-img">
+                            <img src="newsletter_7days.png" alt="7日間メールレッスン">
+                        </div>
+                        <div class="ns-content">
+                            <h3
+                                style="color: var(--primary); font-family: 'Noto Serif JP', serif; font-size: 1.5rem; margin-bottom: 10px;">
+                                片付け脳セットアップ<br>7日間メールレッスン</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                                収納テクニックではなく「思考のクセ」にアプローチ。<br>忙しいママでも無理なく続く、潜在意識から変わる7日間です。</p>
+                            <ul class="newsletter-features" style="margin-bottom: 25px;">
+                                <li>一生片付かない思考のクセを見つける</li>
+                                <li>「片付け脳」のインストール方法</li>
+                                <li>おうちスッキリ111リスト（PDF特典）</li>
+                            </ul>
+                            <a href="https://www.reservestock.jp/subscribe/168370" target="_blank"
+                                class="btn-primary">無料でレッスンを受け取る</a>
+                        </div>
+                    </div>
+
+                    <!-- Normal Newsletter -->
+                    <div class="newsletter-banner reveal" style="flex-direction: row-reverse;">
+                        <div class="ns-img">
+                            <img src="newsletter_hint_book.png" alt="暮らしと心が整うヒント帖">
+                        </div>
+                        <div class="ns-content">
+                            <h3
+                                style="color: var(--primary); font-family: 'Noto Serif JP', serif; font-size: 1.5rem; margin-bottom: 10px;">
+                                1日5分で私に戻れる整え習慣<br>「暮らしと心が整うヒント帖」</h3>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.8;">
+                                片付けは暮らしだけでなく、<br>心と思考を整える小さなスイッチ。<br><br>モノを通して自分と向き合い、<br>私らしさを取り戻すヒントをお届けします。</p>
+                            <ul class="newsletter-features" style="margin-bottom: 25px;">
+                                <li>何から手をつけたらいいかわからない方へ</li>
+                                <li>部屋も心も疲れてしまっている方へ</li>
+                                <li>心地よく暮らすためのマインド整理術</li>
+                            </ul>
+                            <a href="https://www.reservestock.jp/subscribe/150264" target="_blank" class="btn-secondary"
+                                style="border-color:var(--primary); color:var(--primary);">無料メルマガに登録する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="profile-section">
+            <div class="container">
+                <div class="profile-flex">
+                    <div class="profile-image reveal">
+                        <img src="20250203miho-0022.jpg" alt="つきかわみほ プロフィール画像">
+                    </div>
+                    <div class="profile-content">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">つきかわみほ</h2>
+                        <h3 style="color: var(--primary); margin-bottom: 20px; font-weight: normal;">ホップステップお片付け部主宰 /
+                            リリクリメソッド</h3>
+                        <p class="profile-intro" style="font-size: 1.2rem; margin-bottom: 20px;">
+                            「片付けはノウハウじゃない。思考を整えることで、一生モノの『片付け脳』が手に入ります」</p>
+                        <p style="line-height: 1.8; margin-bottom: 20px;">
+                            実は私自身、30年以上も<br>片付けができずに悩んでいました。<br>本気で片付けようと思ったきっかけは、<br>夫の「家に帰ると片付いてなくてイライラする」<br>という一言です。
+                        </p>
+                        <p style="line-height: 1.8; margin-bottom: 20px;">
+                            一念発起して家事代行を頼むも、<br>「何をどこにしまいますか？」という言葉に<br>何も指示ができず、<br>結局リバウンドして大失敗を経験しました。<br><br>そこで初めて、片付けは収納術ではなく<br>「自分の思考がどう整っているか」なのだと<br>思い知らされたのです。
+                        </p>
+                        <p style="line-height: 1.8; margin-bottom: 20px;">
+                            過去の私と同じように、<br>本やSNSを見ても片付けに失敗してきたママたちへ。<br><br>潜在意識のリライトを通じて思考のクセを手放し、<br>自分軸で心地よく暮らせる<br>「奇跡のお片付けメソッド」をお伝えしています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">よくあるご質問</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Q. どこから始めればいいかわかりません。</h4>
+                        <p style="line-height: 1.6;">まずは「片付けタイプ診断」を受けて、<br>自分の傾向を知ることから<br>始めるのがおすすめです。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. O型以外でもセッションは受けられますか？</h4>
+                        <p style="line-height: 1.6;">もちろんです！全血液型・気質の方に対応しています。<br>現在は特にO型さん向けのメソッドが好評をいただいております。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. 動画講座は視聴期限はありますか？</h4>
+                        <p style="line-height: 1.6;">一度ご購入いただければ、<br>無期限で何度でも繰り返しご視聴いただけます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Preview -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <h2 id="modalTitle"></h2>
+                <div class="preview-container">
+                    <!-- Mock Player -->
+                    <div class="mock-player">
+                        <div class="play-indicator">Loading Content...</div>
+                        <p id="previewDesc"></p>
+                    </div>
+                    <div class="purchase-prompt">
+                        <p>続きは本編でご覧いただけます</p>
+                        <a href="https://www.reservestock.jp/inquiry/114129" class="btn-primary">本編を購入する（リザストへ）</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 KATAZUKE.brand All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
