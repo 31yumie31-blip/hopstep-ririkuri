@@ -38,9 +38,11 @@ function openPreview(title, description, type, videoId, vimeoHash = '', stopTime
         
         player.innerHTML = `<iframe id="vimeo-player" 
             src="${embedUrl}" 
+            width="100%" 
+            height="100%" 
             frameborder="0" 
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-            style="width:100%; height:100%;"
+            style="width:100% !important; height:100% !important;"
             title="${title}"></iframe>`;
 
         // 自動停止させるロジック

@@ -891,14 +891,14 @@ footer {
 
 .mock-player {
     background: #000;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Modern aspect ratio control */
     border-radius: 8px;
     overflow: hidden;
     margin: 10px 0; 
     position: relative;
-    width: 100%;
 }
+
 .mock-player iframe {
     position: absolute;
     top: 0;
@@ -906,9 +906,12 @@ footer {
     width: 100% !important;
     height: 100% !important;
     border: none;
-}
-#vimeo-player {
     display: block;
+}
+
+#vimeo-player {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .audio-waves {
