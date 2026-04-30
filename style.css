@@ -868,11 +868,11 @@ footer {
 
 .modal-content {
     background-color: var(--bg-light);
-    margin: 10% auto;
+    margin: 5% auto; /* Reduced top margin slightly for larger screen */
     padding: 30px 20px;
     border-radius: 20px;
     width: 95%;
-    max-width: 800px;
+    max-width: 1100px; /* Increased from 800px */
     position: relative;
     max-height: 90vh;
     overflow-y: auto;

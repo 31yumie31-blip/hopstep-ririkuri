@@ -1,4 +1,7 @@
+let currentPreview = null;
+
 function openPreview(title, description, type, videoId, vimeoHash = '', stopTime = 45, ctaUrl = 'https://www.reservestock.jp/inquiry/114129') {
+    currentPreview = { title, description, type, videoId, vimeoHash, stopTime, ctaUrl };
     const modal = document.getElementById('previewModal');
     const modalTitle = document.getElementById('modalTitle');
     const previewDesc = document.getElementById('previewDesc');
@@ -10,10 +13,21 @@ function openPreview(title, description, type, videoId, vimeoHash = '', stopTime
     modalTitle.innerText = title;
     previewDesc.innerText = description;
 
+    const endScreen = `
+        <div class="preview-end-message">
+            <h3>プレビューはここまでです</h3>
+            <p>この続きは本編にてご覧いただけます。</p>
+            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                <a href="${ctaUrl}" target="_blank" class="btn-primary">今すぐ本編を申し込む</a>
+                <button onclick="openPreview(currentPreview.title, currentPreview.description, currentPreview.type, currentPreview.videoId, currentPreview.vimeoHash, currentPreview.stopTime, currentPreview.ctaUrl)" class="btn-secondary" style="color:var(--primary); border-color:var(--primary); cursor:pointer;">もう一度見る</button>
+            </div>
+        </div>
+    `;
+
     if (type === 'vimeo' && videoId) {
         player.style.background = '#000';
         // ハッシュがある場合とない場合でURLを構築
-        const params = 'title=0&byline=0&portrait=0&badge=0&share=0&autopause=0&dnt=1';
+        const params = 'title=0&byline=0&portrait=0&badge=0&share=0&autopause=0&dnt=1&autoplay=1';
         let embedUrl = `https://player.vimeo.com/video/${videoId}`;
         
         if (vimeoHash) {
@@ -38,13 +52,7 @@ function openPreview(title, description, type, videoId, vimeoHash = '', stopTime
                 // 指定の秒数に達したら停止して終了画面を表示
                 if (data.seconds >= stopTime) {
                     vimeoPlayer.pause();
-                    player.innerHTML = `
-                        <div class="preview-end-message">
-                            <h3>プレビューはここまでです</h3>
-                            <p>この続きは本編にてご覧いただけます。</p>
-                            <a href="${ctaUrl}" target="_blank" class="btn-primary">今すぐ本編を申し込む</a>
-                        </div>
-                    `;
+                    player.innerHTML = endScreen;
                 }
             });
         }
@@ -68,8 +76,11 @@ function openPreview(title, description, type, videoId, vimeoHash = '', stopTime
                 player.innerHTML = `
                     <div class="preview-end-message">
                         <h3>試聴はここまでです</h3>
-                        <p>21日間、毎日届く音声とメッセージで<br>あなたの「片付け習慣」をしっかりサポートします。</p>
-                        <a href="${ctaUrl}" target="_blank" class="btn-primary">レッスンを申し込む</a>
+                        <p>21日間、毎日届く音声とメッセージでしっかりサポートします。</p>
+                        <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                            <a href="${ctaUrl}" target="_blank" class="btn-primary">レッスンを申し込む</a>
+                            <button onclick="openPreview(currentPreview.title, currentPreview.description, currentPreview.type, currentPreview.videoId, currentPreview.vimeoHash, currentPreview.stopTime, currentPreview.ctaUrl)" class="btn-secondary" style="color:var(--primary); border-color:var(--primary); cursor:pointer;">もう一度聴く</button>
+                        </div>
                     </div>
                 `;
             }
